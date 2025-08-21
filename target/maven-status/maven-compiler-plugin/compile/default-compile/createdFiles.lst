@@ -1,0 +1,16 @@
+me/kadim/ErrorLogger.class
+me/kadim/ClientVersionListener.class
+me/kadim/BentoBoxLogger.class
+me/kadim/KadimPlugin$KDCommand.class
+me/kadim/BentoBoxListener.class
+me/kadim/BentoBoxLogger$1.class
+me/kadim/ClientVersionCommand.class
+me/kadim/PlaytimeTracker.class
+me/kadim/KadimPlugin$KDOCommand.class
+me/kadim/KillLogger$1.class
+me/kadim/KillDeathListener.class
+me/kadim/KillLogger.class
+me/kadim/GUIListener.class
+me/kadim/KadimPlugin.class
+me/kadim/KadimPlugin$KadimCommand.class
+me/kadim/KadimPlugin$1.class

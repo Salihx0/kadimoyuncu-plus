@@ -1,0 +1,83 @@
+# KadimOyuncu-Pro Eklentisi Yapılandırma Dosyası
+
+# Ayarlar (Settings)
+settings:
+  # true olarak ayarlanırsa, data.yml dosyası her otomatik kaydedildiğinde konsola bilgi mesajı gönderir.
+  # false olarak ayarlanırsa, bu mesaj konsolda görünmez.
+  log-auto-save: true
+  # true olarak ayarlanırsa, gelişmiş ölüm/öldürme logları konsola yazdırılır.
+  # false olarak ayarlanırsa, sadece ilgili log dosyasına kaydedilir.
+  log-kills-to-console: true
+
+# BentoBox Entegrasyonu
+# Oyuncular ilk adalarını oluşturduğunda rütbe atlatma gibi işlemleri yapar.
+# Bu özelliğin çalışması için sunucuda BentoBox (BSkyBlock vb.) eklentisinin olması gerekir.
+bento-box-integration:
+  # Bu özelliği aktif etmek için 'true', kapatmak için 'false' yapın.
+  enabled: true
+  
+  # Oyuncu ilk adasını oluşturduğunda konsol tarafından çalıştırılacak komut.
+  # {player} değişkeni, adayı oluşturan oyuncunun adıyla otomatik olarak değiştirilir.
+  # Örnek: "lp user {player} parent set oyuncu"
+  first-island-command: "lp user {player} parent set oyuncu"
+
+  # true olarak ayarlanırsa, ilk ada kurma ödülü verildiğinde konsola bilgi mesajı gönderilir.
+  # false olarak ayarlanırsa, bu bilgi sadece bento-integration log dosyasına kaydedilir.
+  # Konsol kirliliğini önlemek için 'false' olarak ayarlanması tavsiye edilir.
+  log-to-console: false
+
+# KD İlerleme Çubuğu ve Yıldız Ayarları
+# Bu bölüm, %kplus_kd%, %kplus_kd_level_bar% ve %kplus_kd_stars% yer tutucularının
+# görünümünü özelleştirmenizi sağlar.
+kd-progress-bar:
+  # İlerleme çubuğunda toplam kaç adet karakter olacağı.
+  total-bars: 10
+  # Dolu ilerleme çubuğu için kullanılacak karakter.
+  filled-char: '█'
+  # Boş ilerleme çubuğu için kullanılacak karakter.
+  empty-char: '░'
+  # Boş ilerleme çubuğu karakterinin rengi.
+  # Bukkit renk kodları kullanılır (örn: GRAY, RED, YELLOW).
+  empty-color: 'GRAY'
+  # K/D oranına göre ilerleme çubuğu ve yıldızların rengini belirleyen gradyan.
+  # Renkler, belirtilen K/D eşiğine (threshold) ulaşıldığında veya geçildiğinde uygulanır.
+  # Eşik değeri 0.0 ile 1.0 arasında olmalıdır (0.0 = 0 K/D, 1.0 = 5 K/D veya üstü).
+  # En yüksek eşiğe uyan renk kullanılır.
+  gradient:
+    - threshold: 0.0
+      color: 'RED'
+    - threshold: 0.2
+      color: 'GOLD'
+    - threshold: 0.4
+      color: 'YELLOW'
+    - threshold: 0.6
+      color: 'GREEN'
+    - threshold: 0.8
+      color: 'DARK_GREEN'
+
+# Client Version Commands - Oyuncu sürümüne göre otomatik komut çalıştırma
+client-version-commands:
+  "1.21.1":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello"
+  "1.21.2":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_v2"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_v2"
+  "1.21.3":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_alt"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_alt"
+  "1.21.4":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_1214"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_1214"
+  "1.21.5":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_1215"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_1215"
+  "1.21.6":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_1216"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_1216"
+  "1.21.7":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_1217"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_1217"
+  "1.21.8":
+    join: "lp user {player} permission set fancynpcs.viewnpc.duello_1218"
+    quit: "lp user {player} permission unset fancynpcs.viewnpc.duello_1218"

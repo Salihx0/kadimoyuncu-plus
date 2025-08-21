@@ -1,0 +1,78 @@
+name: KadimOyuncu-Pro
+main: me.kadim.KadimPlugin
+version: 1.3.0-SNAPSHOT
+api-version: '1.16'
+author: ByNeels
+description: Kapsamlı oyuncu istatistikleri ve yönetim eklentisi.
+softdepend: [PlaceholderAPI, BentoBox]
+
+commands:
+  kd:
+    description: KD oranını gösterir
+    usage: /kd [oyuncu]
+    permission: kadimoyuncuplus.kd.use
+
+  kdo:
+    description: KD ile ilgili seçenekler
+    usage: /kdo [top|reset|export|import|gui|playtime]
+    permission: kadimoyuncuplus.kdo.use
+
+  kplus:
+    description: Eklenti bilgisi ve yeniden yükleme komutu
+    usage: /kplus [reload]
+    permission: kadimoyuncuplus.admin
+
+  kopro:
+    description: Oyuncunun Minecraft sürümünü gösterir
+    usage: /kopro client <oyuncuismi>
+    permission: kadimoyuncuplus.kopro.use
+
+permissions:
+  kadimoyuncuplus.kd.use:
+    description: /kd komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.admin:
+    description: /kplus ve reload işlemleri
+    default: op
+  kadimoyuncuplus.kdo.use:
+    description: /kdo komutunun genel kullanımı
+    default: true
+  kadimoyuncuplus.kdo.top:
+    description: /kdo top komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.kdo.reset:
+    description: Oyuncuların KD verilerini sıfırlama izni
+    default: op
+  kadimoyuncuplus.kdo.export:
+    description: KD verilerini dışa aktarma izni
+    default: op
+  kadimoyuncuplus.kdo.import:
+    description: KD verilerini içe aktarma izni
+    default: op
+  kadimoyuncuplus.kdo.gui:
+    description: /kdo gui komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.kdo.playtime:
+    description: /kdo playtime temel komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.kdo.playtime.top:
+    description: /kdo playtime top komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.kdo.playtime.gui:
+    description: /kdo playtime gui komutunu kullanma izni
+    default: true
+  kadimoyuncuplus.kdo.playtime.reset:
+    description: Belirli bir oyuncunun aktiflik süresini sıfırlama izni
+    default: op
+  kadimoyuncuplus.kdo.playtime.resetall:
+    description: Tüm oyuncuların aktiflik süresini sıfırlama izni
+    default: op
+  kadimoyuncuplus.kdo.playtime.modify:
+    description: Oyuncu aktiflik sürelerini değiştirme izni
+    default: op
+  kadimoyuncuplus.kdo.playtime.modifyall:
+    description: Tüm oyuncuların aktiflik sürelerini topluca değiştirme izni
+    default: op
+  kadimoyuncuplus.kopro.use:
+    description: /kopro komutunu kullanmak için (sadece op)
+    default: op
